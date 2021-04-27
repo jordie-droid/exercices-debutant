@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function triOrdreCroissant(table=[]){
+            var newTable =[];
+            for(var i = 0; i < table.length; i++){
+                for(var j = 0; j < table.length- 1 - i; j++){
+                    if(table[j] > table[j+1]){
+                    alert("Parcours d'organisation " + (i + 1) + "\n" + " je compare " + table[j] + " et " + table[j+1]);
+                    [table[j], table[j+1]] = [table[j+1], table[j]];
+                    // table[i] = table[i+1];
+                }
+                }
+            }
+            return table;
+        }
+        var table = ["jordie","randy","papa","orange","mange","banane","sacré","françois","romiale","mariam","yedidya","salva"];
+        alert("L'ancien tableau était :\n" + table + "\n" + "Le nouveau tableau est : " + triOrdreCroissant(table));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var jour,
+            mois,
+            annee;
+        do {
+            jour = prompt("Entrez le numéro du jour supérieur à '0' et en chiffre svp! Ex.:'04'");
+        } while (isNaN(jour) || jour < 0);
+
+        do {
+            mois = prompt("Entrez le numéro du mois supérieur à '0' et en chiffre svp! Ex.:'02'");
+        } while (isNaN(mois) || mois < 0);
+
+        do {
+            annee = parseInt(prompt("Entrez le numéro de l'année supérieur à '0' et en chiffre svp! Ex.:'2021'"));
+        } while (isNaN(annee) || annee < 0);
+        if ((jour > 29 && mois == 02) || jour > 31 || mois > 12 || (jour > 30 && mois == 06)) {
+            alert("la date" + jour + " " + mois + " " + annee + " est invalide");
+        } else {
+            alert("la date" + jour + " " + mois + " " + annee + " est valide");
+        }
+    </script>
+</body>
+
+</html>

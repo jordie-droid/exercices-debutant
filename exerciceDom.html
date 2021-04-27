@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somme de Deux éléments</title>
+</head>
+<body>
+
+    <ul>
+        <li>beni</li>
+        <li>christ</li>
+        <li>duchesse</li>
+    </ul>
+    <form action="">
+        <input id="premier_nombre" type="text" placeholder="Première valeur">
+        <input id="deuxième_nombre" type="text" placeholder="Deuxième valeur">
+        <input id="somme_zone" type="text" disabled="true">
+        <button id="btn_somme">Somme</button>
+    <script>
+         
+        // récupération de mon boutton
+        var button = document.querySelector("#btn_somme");
+        // Click event
+        button.addEventListener('click', addfunction);
+        // my addfunction
+        function addfunction(e){
+            var nombre1 = document.querySelector("#premier_nombre");
+            var nombre2 = document.querySelector("#deuxième_nombre");
+            var resultat = document.querySelector("#somme_zone");
+            nombre1 = parseInt(nombre1.value);
+            nombre2 = parseInt(nombre2.value);
+            if(isNaN(nombre1) || isNaN(nombre2)){
+                alert("Veuillez saisir les numériques svp !!!");
+            }else{
+                var somme = nombre1 + nombre2;
+                resultat.value= somme;
+            }
+            e.returnValue=false;
+        }
+        var ul=document.querySelector("ul");
+       var li=document.querySelectorAll("ul li");
+
+       for (let index = 0; index < li.length; index++) {
+           li[index].addEventListener('click',function(){
+               ul.removeChild(this);
+           })
+           
+       }
+    </script>
+    </form>
+</body>
+</html>

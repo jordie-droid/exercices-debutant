@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Nombre = parseInt(prompt("Entrer un nombre compris entre 10 Et 20"));
+        do {
+            if (Nombre > 20) {
+                Nombre = parseInt(prompt("Plus pétit"));
+            } else if (Nombre < 10) {
+                Nombre = parseInt(prompt("Plus grand"));
+            } else if (isNaN(Nombre)) {
+                do {
+                    Nombre = parseInt(prompt("veillez entrer un nombre svp"));
+                } while (isNaN(Nombre));
+            } else {
+                alert("vous avez reussi");
+            }
+        } while (Nombre < 10 || Nombre > 20 || isNaN(Nombre));
+        alert("Vous avez reussi " + Nombre + "est entre 10 et 20");
+    </script>
+</body>
+
+</html>

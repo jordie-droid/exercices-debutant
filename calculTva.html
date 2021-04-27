@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var lib = prompt("Entrez le nom de l'article"),
+            Htaxe = parseInt(prompt("Entrez le prix de l'article"));
+        while (isNaN(Htaxe) || Htaxe <= 0) {
+            Htaxe = prompt("nombre entré invalide!, veillez entrer un nombre valide");
+        }
+
+        var NbrArticle = parseInt(prompt("Entrez le nombre d'article"));
+        while (isNaN(NbrArticle) || NbrArticle <= 0) {
+            NbrArticle = parseInt(prompt("valeur incorrecite! veillez entrez une valeur correcte du nombre d'article"));
+        }
+        var Tva = parseInt(prompt("Entrez le montant de la TVA"));
+        while (isNaN(Tva || Tva < 0)) {
+            Tva = parseInt(prompt("valeur incorrecte! veillez entrer une valeur de la TVA correcte"));
+        }
+        var Ttc = Htaxe * NbrArticle * (1 + (Tva * 0.01));
+        alert("voici votre commande et le prix total:\n" + "Article: " + lib + ";\n" + "Nombre d'article :" + NbrArticle + ";\n" + "La TVA est de : " + Tva + "%;" + "\n" + "le Prix total (TTC) est: " + Ttc);
+    </script>
+</body>
+
+</html>

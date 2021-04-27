@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var FirstNmbr = parseFloat(prompt("Entrez le prémier nombre"));
+        while (isNaN(FirstNmbr)) {
+            FirstNmbr = parseFloat(prompt("ce que vous avez entré n'est pas un nombre ! veillez entrer un nombre"));
+        }
+        var secondNmbr = parseFloat(prompt("entrez le deuxième nombre"));
+        while (isNaN(secondNmbr)) {
+            secondNmbr = parseFloat(prompt("ce que vous avez entré n'est pas un nombre! veillez entrer un nombre"));
+        }
+        if (FirstNmbr < 0 && secondNmbr > 0 || FirstNmbr > 0 && secondNmbr < 0) {
+            alert("le produit de " + FirstNmbr + " et de " + secondNmbr + " sera negatif");
+        } else if (FirstNmbr > 0 && secondNmbr > 0) {
+            alert("le produit de " + FirstNmbr + " et de " + secondNmbr + " sera positif");
+        } else {
+            alert("zero n'est pas pris en compte");
+        }
+    </script>
+</body>
+
+</html>

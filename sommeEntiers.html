@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        do {
+            var nombre = parseInt(prompt("veillez entrez un nombre"));
+        } while (isNaN(nombre));
+        var sommeEntiers = 0;
+        for (let i = 0; i <= nombre; i++) {
+            sommeEntiers = sommeEntiers + i;
+        }
+        alert("la somme des entiers contenus dans " + nombre + " est " + sommeEntiers);
+    </script>
+</body>
+
+</html>

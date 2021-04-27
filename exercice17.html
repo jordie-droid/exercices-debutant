@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var age = 0,
+            dureePermi = 0,
+            nombreAccident = 0,
+            dureeFidelite = 0;
+        age = parseInt(prompt("Entrez votre age"));
+        while (isNaN(age) || age < 0) {
+            age = parseInt(prompt("Age invalide! veillez Entrez votre age en nombre entier svp"));
+        }
+        dureePermi = parseInt(prompt("Entrez la durée de votre permis"));
+        while (isNaN(dureePermi) || dureePermi < 0) {
+            dureePermi = parseInt(prompt("durée permis invalide! veillez Entrez la durée en nombre entier svp"));
+        }
+        nombreAccident = parseInt(prompt("Entrez le nombre d'accidents"));
+        while (isNaN(nombreAccident) || nombreAccident < 0) {
+            nombreAccident = parseInt(prompt("Nombre invalide! veillez Entrez un nombre entier et pas inférieur à zéro svp"));
+        }
+        if (age < 25 && dureePermi < 2 && nombreAccident == 0) {
+            dureeFidelite = parseInt(prompt("Entrez la durée de fidélité"));
+
+            while (isNaN(dureeFidelite) || dureeFidelite < 0) {
+                dureeFidelite = parseInt(prompt("Nombre invalide! veillez Entrez un nombre entier et pas inférieur à zéro svp"));
+            }
+            if (dureeFidelite >= 2) {
+                alert("client tarif Bleu");
+            } else {
+                alert("client tarif Rouge");
+            }
+        } else if (age < 25 && dureePermi < 2 && nombreAccident > 0) {
+            alert("contrat refusé");
+        } else if ((age < 25 && dureePermi > 2) || (age > 25 && dureePermi < 2) && nombreAccident == 0) {
+            dureeFidelite = parseInt(prompt("Entrez la durée de fidélité"));
+
+            while (isNaN(dureeFidelite) || dureeFidelite < 0) {
+                dureeFidelite = parseInt(prompt("Nombre invalide! veillez Entrez un nombre entier et pas inférieur à zéro svp"));
+            }
+            if (dureeFidelite >= 2) {
+                alert("client tarif Bleu");
+            } else {
+                alert("client tarif Orange");
+            }
+        } else if ((age < 25 && dureePermi >= 2) || (age > 25 && dureePermi < 2) && nombreAccident == 1) {
+            dureeFidelite = parseInt(prompt("Entrez la durée de fidélité"));
+
+            while (isNaN(dureeFidelite) || dureeFidelite < 0) {
+                dureeFidelite = parseInt(prompt("Nombre invalide! veillez Entrez un nombre entier et pas inférieur à zéro svp"));
+            }
+            if (dureeFidelite >= 2) {
+                alert("client tarif Bleu");
+            } else {
+                alert("client tarif Rouge");
+            }
+        } else if ((age < 25 && dureePermi > 2) || (age > 25 && dureePermi < 2) && nombreAccident >= 2) {
+            alert("contrat refusé");
+        } else if ((age > 25 && dureePermi > 2) && nombreAccident == 0) {
+            dureeFidelite = parseInt(prompt("Entrez la durée de fidélité"));
+
+            while (isNaN(dureeFidelite) || dureeFidelite < 0) {
+                dureeFidelite = parseInt(prompt("Nombre invalide! veillez Entrez un nombre entier et pas inférieur à zéro svp"));
+            }
+            if (dureeFidelite >= 2) {
+                alert("client tarif Bleu");
+            } else {
+                alert("client tarif Vert");
+            }
+        } else if ((age > 25 && dureePermi >= 2) && nombreAccident == 1) {
+            dureeFidelite = parseInt(prompt("Entrez la durée de fidélité"));
+
+            while (isNaN(dureeFidelite) || dureeFidelite < 0) {
+                dureeFidelite = parseInt(prompt("Nombre invalide! veillez Entrez un nombre entier et pas inférieur à zéro svp"));
+            }
+            if (dureeFidelite >= 2) {
+                alert("client tarif Bleu");
+            } else {
+                alert("client tarif Orange");
+            }
+        } else if ((age > 25 && dureePermi >= 2) && nombreAccident == 2) {
+            dureeFidelite = parseInt(prompt("Entrez la durée de fidélité"));
+
+            while (isNaN(dureeFidelite) || dureeFidelite < 0) {
+                dureeFidelite = parseInt(prompt("Nombre invalide! veillez Entrez un nombre entier et pas inférieur à zéro svp"));
+            }
+            if (dureeFidelite >= 2) {
+                alert("client tarif Bleu");
+            } else {
+                alert("client tarif Rouge");
+            }
+        } else if ((age > 25 && dureePermi >= 2) && nombreAccident > 2) {
+            alert("contrat refusé");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arrPositif = [],
+            arrNegatif = [],
+            number;
+        var nombreSaisie = parseInt(prompt("Entrez la taille valide du tableau"));
+
+        while (isNaN(nombreSaisie) || nombreSaisie < 0) {
+            nombreSaisie = parseInt(prompt("Entrez un nombre et pas en dessous de 0 svp"));
+        }
+        for (let i = 0; i < nombreSaisie; i++) {
+            do {
+                number = parseInt(prompt("Entrez un nombre négatif ou positif"))
+            } while (isNaN(number))
+            if (number < 0) {
+                arrNegatif.push(number);
+            } else {
+                arrPositif.push(number);
+            }
+
+        }
+        alert("voici les nombres négatifs " + arrNegatif + ";\n" + "Voici les nombres positifs " + arrPositif);
+    </script>
+</body>
+
+</html>

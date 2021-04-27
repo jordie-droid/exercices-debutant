@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 0,
+            sommeTab = 0,
+            sum = 0,
+            CotesEleves = [],
+            supMoyenne = [];
+
+        do {
+            var cotes = parseInt(prompt("Entrez la note de l'élève"));
+
+            while (isNaN(cotes) || cotes < 0) {
+                cotes = parseInt(prompt("Note invalide! veillez entrer un nombre svp"));
+            }
+            CotesEleves.push(cotes);
+            var confirme = confirm("Appuyez sur Ok pour continuer ou \nAnnuler pour afficher le résultat");
+            sum = CotesEleves[i] + sum;
+            i = i + 1;
+        } while (confirme);
+
+        var moyenne = sum / i;
+        for (let j = 0; j < CotesEleves.length; j++) {
+            if (CotesEleves[j] > moyenne) {
+                supMoyenne.push(CotesEleves[j]);
+                var nombreSuperMoyen = supMoyenne.length;
+            }
+        }
+        alert("la moyenne est: " + moyenne + "\n" + "les notes superieurs à la moyenne sont:" + nombreSuperMoyen + "\n" + "voici les notes au déssus de la Moyenne " + supMoyenne);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tabNoms = ['arslene', 'mardochée', 'junior', 'sarah', 'bénit', 'bonard', 'merdie', 'gislain', 'meshak', 'Romiale', 'olga', 'randy', 'Randy', 'simeon', 'Yves', 'kevin', 'bellamard', 'rosaire', 'medie', 'benjamin', 'christopher', 'gaspare', 'olga', 'emanuella', 'mashack', 'christelle', 'myriam', 'sacré', 'benit', 'akelax', 'Minganda'],
+            NomTrouve = "",
+            Nom = prompt("Entrez un Nom à réchercher");
+        for (let i = 0; i < tabNoms.length; i++) {
+            if (tabNoms[i] == Nom) {
+                NomTrouve = tabNoms[i];
+            }
+        }
+        if (Nom == NomTrouve) {
+            alert(NomTrouve + " est dans le dictionnaire de Noms");
+        } else {
+            alert(Nom + " pas trouvé")
+        }
+    </script>
+</body>
+
+</html>

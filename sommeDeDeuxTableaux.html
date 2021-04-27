@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var premierTab = [],
+            deuxiemeTab = [],
+            tabAddition = [],
+            tailleTab = parseInt(prompt("Entrez la taille du tableau"));
+        while (isNaN(tailleTab) || tailleTab <= 0) {
+            tailleTab = parseInt(prompt("veillez une taille en chiffre et différente de zéro svp"));
+        }
+        for (let i = 0; i < tailleTab; i++) {
+            var nombre = parseInt(prompt("Entrez un nombre pour le prémier tableau vous etes encore à : " + (i + 1) + " sur " + tailleTab));
+            while (isNaN(nombre)) {
+                nombre = parseInt(prompt("saisie invalide!; veillez entrer un nombre svp"));
+            }
+            premierTab.push(nombre);
+
+        }
+        for (let i = 0; i < tailleTab; i++) {
+            var nombre = parseInt(prompt("Merci! Entrez un nombre pour \n le deuxième tableau vous etes encore à: " + (i + 1) + " sur " + tailleTab));
+            while (isNaN(nombre)) {
+                nombre = parseInt(prompt("saisie invalide!; veillez entrer un nombre svp"));
+            }
+            deuxiemeTab.push(nombre);
+            tabAddition.push(premierTab[i] + deuxiemeTab[i]);
+
+        }
+        alert("la somme de deux tableau est :\n " + tabAddition);
+    </script>
+</body>
+
+</html>

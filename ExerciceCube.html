@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cubeNombre(nombre){
+            if(nombre < 0) {
+                return (nombre **3)* -1;
+            }else{
+                return nombre **3;
+            }
+        }
+        var nombre = 0, result = "";
+        for(var i = 0; i < 3; i++){
+            do{                
+                nombre = prompt("Veuillez saisir le nombre " + (i+1));
+                if(isNaN(nombre) || nombre === ""){
+                    alert("Veuillez saisir une valeure numérique");
+                }else{
+                    nombre = Number(nombre);
+                    if(nombre < 0){
+                        result += "La valeur absolue du cube de " + nombre + " est " + cubeNombre(nombre) + "\n"; 
+                    } else {
+                        result += "La valeur absolue du cube de " + nombre + " est " + cubeNombre(nombre) + "\n"; 
+                    }             
+                }
+            } while(isNaN(nombre) || nombre === "");
+        }
+        alert(result);
+    </script>
+</body>
+</html>

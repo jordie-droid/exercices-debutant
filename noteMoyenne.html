@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 0,
+            sum = 0,
+            cotePhys = [],
+            totalNoteReussite = 0,
+            Tabreussite = [];
+
+        do {
+            var cote = parseInt(prompt("Entrez la Cote de l'élève"));
+
+            while (isNaN(cote) || cote < 0 || 20 < cote) {
+                cote = parseInt(prompt("Cote invalide! veillez entrer un nombre allant de 0 à 20"));
+            }
+            cotePhys.push(cote);
+            var confirme = confirm("Appuyer sur Ok pour continuer \n ou sur Annuler pour afficher le résultat");
+            sum = cotePhys[i] + sum;
+            i = i + 1;
+        } while (confirme);
+
+        var moyenne = sum / i;
+        for (let j = 0; j < cotePhys.length; j++) {
+            if (cotePhys[j] >= 10) {
+                Tabreussite.push(cotePhys[j]);
+                totalNoteReussite = cotePhys[j] + totalNoteReussite;
+                var moyenneReussite = totalNoteReussite / Tabreussite.length;
+            }
+        }
+        alert("la moyenne de reussite est: " + moyenneReussite + "\n" + "les Cotes de la reussite sont:" + Tabreussite.length + "\n" + "voici les Cotes au déssus de la Moyenne " + Tabreussite);
+    </script>
+</body>
+
+</html>

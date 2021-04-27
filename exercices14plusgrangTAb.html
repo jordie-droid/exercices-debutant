@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var TabDeNombre = [],
+            plusGrandNombre, nombre = 0, position = [],
+            tailleTab = 0;
+        do {
+            tailleTab = parseInt(prompt("veillez saisir un entier positif et non null"));
+            if(tailleTab <= 0 || isNaN(tailleTab)){
+                alert("Veuillez saisir un entier positif et non null");
+            }else{
+                for (var i = 0; i < tailleTab; i++) {
+                    do{
+                        nombre = parseInt(prompt("Veillez entrer un nombre svp\n\n*Nombre de saisie : " +
+                            i + " sur " + tailleTab-1));
+                        if(isNaN(nombre)){
+                            alert("Veillez entrer un nombre svp");
+                        } else {                            
+                            TabDeNombre.push(nombre);
+                        }
+                    }while (isNaN(nombre));
+                }
+                plusGrandNombre = TabDeNombre[0];
+                for(var j = 0; j < TabDeNombre.length; j++){
+                    if (TabDeNombre[j] > plusGrandNombre) {
+                        position = [];
+                        plusGrandNombre = TabDeNombre[j];
+                        position.push(j);
+                    } else if (TabDeNombre[j] == plusGrandNombre) {
+                        position.push(j);
+                    }
+                }
+            }
+        }while (isNaN(tailleTab) || tailleTab <= 0);
+        alert("La (Les) valeur (s) introduite (s) est (sont) : " 
+        + TabDeNombre + "\nLe plus grand nombre est : " + plusGrandNombre + 
+        "\nIl est  à la (les) position (s) : " + position);
+    </script>
+</body>
+
+</html>

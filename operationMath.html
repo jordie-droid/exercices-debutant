@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nbr1 = parseInt(prompt("Entrez le prémier nombre"));
+        while (isNaN(nbr1)) {
+            nbr1 = parseInt(prompt("Entrez un nombre valide svp"));
+        }
+        var nbr2 = parseInt(prompt("Entrez le deuxième nombre"));
+        while (isNaN(nbr2)) {
+            nbr2 = parseInt(prompt("Entrez un nombre valide svp"));
+        }
+        var multi = nbr1 * nbr2,
+            somme = nbr1 + nbr2,
+            differ = nbr1 - nbr2,
+            division = nbr1 / nbr2;
+        alert("La multiplication de " + nbr1 + " et " + nbr2 + " est :" + multi + "\n" + "La somme de " + nbr1 + " et " + nbr2 + " est :" + somme + "\n" + "La différence de " + nbr1 + " et " + nbr2 + " est :" + differ + "\n" + "La division de " + nbr1 + " et " + nbr2 + " est :" + division);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tabInverse = [],
+            tabNombre = [];
+        tailleTab = parseInt(prompt("Entrez la taille du tableau"));
+        while (isNaN(tailleTab) || tailleTab <= 0) {
+            tailleTab = parseInt(prompt("veillez une taille en chiffre et différente de zéro svp"));
+        }
+        for (let i = 0; i < tailleTab; i++) {
+            var nombre = parseInt(prompt("Entrez un nombre dans le tableau vous etes encore à:" + i + " sur " + tailleTab));
+            while (isNaN(nombre)) {
+                nombre = parseInt(prompt("saisie invalide!; veillez entrer un nombre svp"));
+            }
+            tabNombre.push(nombre);
+
+        }
+        for (let i = 0; i <= tailleTab; tailleTab--) {
+            tabInverse.push(tabNombre[tailleTab]);
+        }
+        alert("le tableau de :" + tabNombre + " donne :\n " + tabInverse);
+    </script>
+</body>
+
+</html>

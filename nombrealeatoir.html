@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nbreAleatoir = Math.floor(Math.random() * 11);
+        var nbrUser = parseInt(prompt("Entrez un nombre allant de 1 à 10"));
+
+        while (nbreAleatoir != nbrUser) {
+            while (isNaN(nbrUser) || nbrUser < 0 || nbrUser > 10) {
+                nbrUser = parseInt(prompt("veillez Entrer un nombre allant de 1 à 10"));
+            }
+
+            nbrUser = parseInt(prompt("Pas de correspondance! Entrez un nombre allant de 0 à 10"));
+        }
+        alert("Bon travail le nombre est: " + nbreAleatoir);
+    </script>
+</body>
+
+</html>
